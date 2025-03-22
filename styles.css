@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.coordSystem-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  flex: 1;
+}
+input {
+  padding: 0 5px;
+  font-size: 14px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+input[type="color"] {
+  padding: 5px;
+}
+.button_coords_draw,
+.button_clear {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #0b6910;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.button_coords_draw:hover {
+  background-color: #116015;
+}
+.button_clear {
+  background-color: #970305;
+}
+.button_clear:hover {
+  background-color: #7f0301;
+}
+.create-coords {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.create-coords .input-group {
+  margin: 0;
+}
+.romb-list-container {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+.romb-list-container h2 {
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+.romb-list-container li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.romb-list-container li h3 {
+  line-height: 30px;
+  font-size: 16px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.romb-list-container li h3:hover {
+  white-space: normal;
+}
+.romb-list-container .button_delete {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #970305;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.romb-list-container .button_delete:hover {
+  background-color: #7f0301;
+}
+.romb-color {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.buttons-container {
+  width: 300px;
+  opacity: 0.5; /* Робить блок сірішим */
+  pointer-events: none; /* Забороняє натискати кнопки */
+
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.input-group,
+.coords {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 230px;
+  margin: auto;
+}
+.segment-count-enter {
+  width: auto;
+  justify-content: flex-start;
+}
+.input-group label {
+  font-size: 16px;
+  line-height: 35px;
+  margin-bottom: 5px;
+}
+.input-group input {
+  width: 50%;
+  max-width: 150px;
+  border: 1px solid #5b5b5b;
+  border-radius: 5px;
+}
+.coords .input-group input {
+  width: 100%;
+}
+.input-group input[type="color"] {
+  border-radius: 50%;
+}
+.create-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.create-btn:hover {
+  background: #333;
+}
+
+#error-message-params,
+#error-message-segment {
+  color: red;
+  display: none;
+  text-align: center;
+  font-size: 12px;
+}
